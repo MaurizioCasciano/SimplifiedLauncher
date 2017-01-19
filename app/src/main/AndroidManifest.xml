@@ -25,7 +25,15 @@
         <activity
             android:name="com.simplifiedlauncher.applist.AppsListActivity"
             android:label="@string/title_activity_app_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.simplifiedlauncher.sms.NewSMSActivity"
+            android:label="Nuovo Messaggio"></activity>
+
+        <activity android:name="com.simplifiedlauncher.sms.SMSListActivity"></activity>
     </application>
 
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 </manifest>

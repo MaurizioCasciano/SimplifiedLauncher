@@ -9,7 +9,7 @@ import android.graphics.drawable.Drawable;
 public class AppDetail {
 
     public CharSequence getLabel() {
-        return label;
+        return this.label;
     }
 
     public void setLabel(CharSequence label) {
@@ -17,7 +17,7 @@ public class AppDetail {
     }
 
     public CharSequence getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(CharSequence name) {
@@ -25,7 +25,7 @@ public class AppDetail {
     }
 
     public Drawable getIcon() {
-        return icon;
+        return this.icon;
     }
 
     public void setIcon(Drawable icon) {
