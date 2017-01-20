@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_377324fc5a8424ebf20f408e0e31a42aef42871f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_8a47245a7cb4be16fe3c47f4233c1229d1c64b4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_85f774eef5a5ab1b1f69d20da5838211c496f928.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_aa5c6110ecc84f575bfcf824ab18138b9b35bf9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_31f7819deac301a611bea367b5d35b48620753f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_46ad18635762005fe7f29c11553b82f491a18c28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_768db10c5fdbe1b9544ea46a94a1f9ab2f8ef008.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_f9971c2fd61d97b3dcb377df8b7f482c539d325f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_2415e60e8b4e06d84688dd369d42963d5e9ee846.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_44d8262055715024b6ac9cdc3f0cba30c9ebbf6b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_dc8c4d78e8a5fb8ebc7b0d39cc3e1527fda200ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_d939e14edd41dfc4b76dbf7ebde928f4ef2ebf40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_3a3fb8a8eb1f4c1f58201227f41627de4a6a4d49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_9770e542a07d59f3210c9be911ec9b6d18e756b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_602c61677bd84c318bce5307cc4f478682ef0d09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_d79d49ff0f8bb71c95ebfd78b584c55064e8f3eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Carmine\AndroidStudioProjects\SimplifiedLauncher\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_d84e5440d49c8232752093948d6272840e250e57.jar" />
+    </item>
+
+</items>
