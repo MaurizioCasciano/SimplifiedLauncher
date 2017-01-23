@@ -11,8 +11,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.maurizio.simplifiedlauncher.R;
+import com.simplifiedlauncher.gallery.PhotoGalleryActivity;
 import com.simplifiedlauncher.permissions.RuntimePermissionsActivity;
 
 public class MainActivity extends RuntimePermissionsActivity {
@@ -42,7 +44,7 @@ public class MainActivity extends RuntimePermissionsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (!super.checkPermission(permissions)) {
+        if (super.checkPermission(permissions)) {
             Log.d(TAG, "onCreate: permissions granted");
         } else {
             Log.d(TAG, "onCreate: permissions denied");
@@ -57,6 +59,7 @@ public class MainActivity extends RuntimePermissionsActivity {
         sms = (Button) findViewById(R.id.sms);
         chiamate_rapide = (Button) findViewById(R.id.chiamate_rapide);
         fotocamera = (Button) findViewById(R.id.camera);
+        final Fotocamera f =new Fotocamera(this);
         galleria = (Button) findViewById(R.id.galleria);
 
         telefono.setOnTouchListener(new View.OnTouchListener() {
@@ -134,6 +137,7 @@ public class MainActivity extends RuntimePermissionsActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         fotocamera.setBackgroundColor(Color.WHITE);
+                        f.dispatchTakePictureIntent();
                         break;
                 }
                 return true;
@@ -148,6 +152,8 @@ public class MainActivity extends RuntimePermissionsActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         galleria.setBackgroundColor(Color.WHITE);
+                        Intent i=new Intent(getApplicationContext(), PhotoGalleryActivity.class);
+                        startActivity(i);
                         break;
                 }
                 return true;
@@ -158,6 +164,11 @@ public class MainActivity extends RuntimePermissionsActivity {
     @Override
     public void onPermissionsGranted(int requestCode) {
 
+    }
+    @Override
+    protected void onActivityResult(int arg0, int arg1, Intent arg2) {
+        Toast.makeText(this, "onActivityResult called", Toast.LENGTH_LONG).show();
+        super.onActivityResult(arg0, arg1, arg2);
     }
 
 
