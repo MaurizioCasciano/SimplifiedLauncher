@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.maurizio.simplifiedlauncher.R;
+import com.simplifiedlauncher.permissions.RuntimePermissionsActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +24,7 @@ import java.util.Comparator;
  * Created by Carmine on 18/01/2017.
  */
 
-public class Rubrica extends AppCompatActivity {
+public class Rubrica extends RuntimePermissionsActivity {
     ListView elencoContatti;
     Button aggiungiContatto;
     EditText editCerca;
@@ -176,4 +177,10 @@ public class Rubrica extends AppCompatActivity {
         }
     }
 
+    /*======================================PERMISSIONS==============================================*/
+
+    @Override
+    public void onPermissionsGranted(int requestCode) {
+
+    }
 }
