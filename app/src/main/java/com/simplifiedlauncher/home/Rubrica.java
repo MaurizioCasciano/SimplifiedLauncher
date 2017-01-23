@@ -1,9 +1,7 @@
 package com.simplifiedlauncher.home;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,8 +10,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-
-import com.example.maurizio.simplifiedlauncher.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +25,7 @@ public class Rubrica extends AppCompatActivity {
     EditText editCerca;
     ArrayList<Contatto> array_contatti;
     CustomAdapterContatto adapter;
-    Intent i;
+    Intent padre;
     final int REQUEST_CODE_FORM_INSERISCI_CONTATTO=0;
 
     @Override
@@ -40,6 +36,10 @@ public class Rubrica extends AppCompatActivity {
         elencoContatti = (ListView) findViewById(R.id.elencoContatti);
         aggiungiContatto = (Button) findViewById(R.id.aggiungiContatto);
         editCerca = (EditText) findViewById(R.id.cerca);
+
+        padre=getIntent();
+        array_contatti= (ArrayList<Contatto>) padre.getSerializableExtra("Rubrica");
+        aggiornaLista();
 
         elencoContatti.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -68,58 +68,8 @@ public class Rubrica extends AppCompatActivity {
 
             }
         });
-
-        array_contatti = new ArrayList<Contatto>();
-
-        creaListaContatti();
     }
 
-    /* Ottiene la lista dei contatti della rubrica*/
-    /* Chiama il metodo getPhoneNumber*/
-    public void creaListaContatti(){
-        String[] columns = {ContactsContract.Contacts._ID, ContactsContract.Contacts.DISPLAY_NAME, ContactsContract.Contacts.HAS_PHONE_NUMBER};
-        Cursor cursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, columns, null,null, ContactsContract.Contacts.DISPLAY_NAME);
-
-        int ColumeIndex_ID = cursor.getColumnIndex(ContactsContract.Contacts._ID);
-        int ColumeIndex_DISPLAY_NAME = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
-        int ColumeIndex_HAS_PHONE_NUMBER = cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER);
-        int i=0;
-
-        while (cursor.moveToNext()&&i<50) {
-            String id = cursor.getString(ColumeIndex_ID);
-            String nome = cursor.getString(ColumeIndex_DISPLAY_NAME);
-            String has_phone = cursor.getString(ColumeIndex_HAS_PHONE_NUMBER);
-            String numero="";
-
-            if (!has_phone.endsWith("0")) {
-                numero=getPhoneNumber(id);
-                Contatto contatto = new Contatto(nome,numero);
-                array_contatti.add(contatto);
-                i++;
-            }
-        }
-        cursor.close();
-        aggiornaLista();
-    }
-
-    //Viene chiamato da creaListaContatti
-    //Restituisce il numero (i numeri se più di uno) del contatto con l'id passato come parametro
-    public String getPhoneNumber(String id) {
-        String number = "";
-        Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id, null,  ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
-        if(phones.getCount() > 0)
-        {
-            while(phones.moveToNext())
-            {
-                number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-            }
-
-        }
-
-        phones.close();
-
-        return number;
-    }
 
     //Viene chiamato dopo l'aggiunta di un nuovo contatto
     //Ordina i contatti in ordine alfabetico e li mostra
@@ -140,7 +90,7 @@ public class Rubrica extends AppCompatActivity {
         int lunghezzaFiltro = filtro.length();
         ArrayList<Contatto> elencoFiltrato = new ArrayList<Contatto>();
         for (Contatto c: array_contatti){
-            if (c.getNome().substring(0,lunghezzaFiltro).equalsIgnoreCase(filtro))
+            if (lunghezzaFiltro<=c.getNome().length() && c.getNome().substring(0,lunghezzaFiltro).equalsIgnoreCase(filtro))
                 elencoFiltrato.add(c);
         }
         aggiornaListaFiltrata(elencoFiltrato);
@@ -172,6 +122,8 @@ public class Rubrica extends AppCompatActivity {
                 Contatto contatto = new Contatto(nomeContatto, numeroContatto);
                 array_contatti.add(contatto);
                 aggiornaLista();
+                padre.putExtra("RubricaAggiornata",array_contatti);
+                setResult(RESULT_OK,padre);
             }
         }
     }

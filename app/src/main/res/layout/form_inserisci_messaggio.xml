@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuovo Messaggio"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#f0000000"
+            android:text="A: "
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/destinatario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordo_edit_text"
+            android:textSize="30dp"
+            android:padding="5dp"
+            android:hint="Inserisci nome per cercare o numero"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/testoMessaggio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:background="@drawable/bordo_edit_text"
+            android:hint="Inserisci qui il corpo del messaggio"
+            />
+
+        <ListView
+            android:id="@+id/elencoContatti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+        </ListView>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:onClick="indietro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Annulla"
+            android:background="#ff00"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:onClick="invia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invia"
+            android:background="#ff00ff00"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+</LinearLayout>

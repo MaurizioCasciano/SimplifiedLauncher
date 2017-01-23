@@ -9,12 +9,14 @@
     tools:context="com.simplifiedlauncher.home.MainActivity">
 
     <TextView
+        android:id="@+id/orario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_weight="1"
         android:textSize="30dp"
-        android:text="00:00"
+        android:textStyle="bold"
+        android:textColor="#f000"
         android:background="#fff"/>
 
     <LinearLayout

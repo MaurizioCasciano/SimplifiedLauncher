@@ -10,8 +10,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-
-import com.example.maurizio.simplifiedlauncher.R;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -85,11 +84,13 @@ public class FormInserisciContatto extends AppCompatActivity {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            Toast.makeText(getApplicationContext(),"Nuovo contatto inserito",Toast.LENGTH_SHORT).show();
             activity_padre.putExtra("NomeContatto", nome);
             activity_padre.putExtra("NumeroContatto", numero);
             setResult(RESULT_OK, activity_padre);
             finish();
         }else{
+            Toast.makeText(getApplicationContext(),"Riempire i campi",Toast.LENGTH_SHORT).show();
             setResult(RESULT_CANCELED,activity_padre);
         }
     }

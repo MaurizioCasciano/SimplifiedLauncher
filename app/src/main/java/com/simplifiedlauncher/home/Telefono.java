@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.maurizio.simplifiedlauncher.R;
-
 /**
  * Created by Carmine on 18/01/2017.
  */
