@@ -170,6 +170,4 @@ public class MainActivity extends RuntimePermissionsActivity {
         Toast.makeText(this, "onActivityResult called", Toast.LENGTH_LONG).show();
         super.onActivityResult(arg0, arg1, arg2);
     }
-
-
 }
