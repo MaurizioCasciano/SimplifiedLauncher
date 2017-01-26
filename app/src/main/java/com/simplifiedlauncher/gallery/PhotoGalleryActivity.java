@@ -46,7 +46,6 @@ public class PhotoGalleryActivity extends AppCompatActivity {
                 setAdapter();
                 getFilePaths();
                 loadImage();
-                test();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,7 +59,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         for (int i = 0; i < numberOfImage; i++) {
             File image = new File(filePaths.get(i));
             bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(), bmOptions);
-            arrayImage.add(new OurImage(bitmap));
+            arrayImage.add(new OurImage(bitmap,filePaths.get(i)));
             Log.d("SL", "loadImage: " + image.getAbsolutePath());
             if ((i + 1) % 3 == 0 && i != 0) {
                 itemOfImages ioi = new itemOfImages(arrayImage.get(i - 2), arrayImage.get(i - 1), arrayImage.get(i));
@@ -108,7 +107,6 @@ public class PhotoGalleryActivity extends AppCompatActivity {
                 getFilePaths();
                 loadImage();
                 setAdapter();
-                test();
             }
         }
     }
@@ -119,8 +117,5 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    public void test() {
-        itemOfImages i = (itemOfImages) listView.getAdapter().getItem(0);
-        Log.d("SL", "test: " + i.getFirstImage().getId());
-    }
+
 }
