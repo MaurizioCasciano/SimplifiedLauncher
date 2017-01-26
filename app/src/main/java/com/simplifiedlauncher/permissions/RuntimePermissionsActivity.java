@@ -82,6 +82,8 @@ public abstract class RuntimePermissionsActivity extends AppCompatActivity {
 
     public abstract void onPermissionsGranted(int requestCode);
 
+    /*============================================CHECK==============================================================*/
+
     /**
      * Checks if the permission is granted.
      *
@@ -89,7 +91,7 @@ public abstract class RuntimePermissionsActivity extends AppCompatActivity {
      * @return true if the permission is granted, false if denied.
      */
     public boolean checkPermission(String permission) {
-        int granted = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_CALENDAR);
+        int granted = ContextCompat.checkSelfPermission(this, permission);
         return granted == PackageManager.PERMISSION_GRANTED;
     }
 
@@ -103,8 +105,7 @@ public abstract class RuntimePermissionsActivity extends AppCompatActivity {
         boolean allGranted = true;
 
         for (String permission : permissions) {
-            int granted = ContextCompat.checkSelfPermission(this, permission);
-            allGranted &= (granted == PackageManager.PERMISSION_GRANTED);
+            allGranted &= this.checkPermission(permission);
         }
 
         return allGranted;

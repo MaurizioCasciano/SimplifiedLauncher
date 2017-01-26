@@ -86,7 +86,7 @@ public class Rubrica extends RuntimePermissionsActivity {
         int ColumeIndex_HAS_PHONE_NUMBER = cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER);
         int i=0;
 
-        while (cursor.moveToNext()&&i<50) {
+        while (cursor.moveToNext()) {
             String id = cursor.getString(ColumeIndex_ID);
             String nome = cursor.getString(ColumeIndex_DISPLAY_NAME);
             String has_phone = cursor.getString(ColumeIndex_HAS_PHONE_NUMBER);
