@@ -43,6 +43,8 @@
         <activity android:name="com.simplifiedlauncher.home.Rubrica"/>
         <activity android:name="com.simplifiedlauncher.home.Telefono"/>
         <activity android:name="com.simplifiedlauncher.gallery.PhotoGalleryActivity"/>
+        <activity android:name="com.simplifiedlauncher.home.RapidCall">
+        </activity>
     </application>
 
 </manifest>

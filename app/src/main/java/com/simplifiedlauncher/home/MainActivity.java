@@ -122,6 +122,8 @@ public class MainActivity extends RuntimePermissionsActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         chiamate_rapide.setBackgroundColor(Color.WHITE);
+                        i=new Intent(getApplicationContext(),RapidCall.class);
+                        startActivity(i);
                         break;
                 }
                 return true;
