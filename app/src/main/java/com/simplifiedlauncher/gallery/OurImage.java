@@ -1,6 +1,7 @@
 package com.simplifiedlauncher.gallery;
 
 import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
 
 import java.util.UUID;
 
@@ -11,9 +12,15 @@ import java.util.UUID;
 public class OurImage {
     private UUID id;
     private Bitmap sourceImage;
-    public OurImage(Bitmap sourceImage){
+    private String path;
+    final int THUMBSIZE = 128;
+
+
+
+    public OurImage(Bitmap sourceImage,String path){
         id=UUID.randomUUID();
-        this.sourceImage=sourceImage;
+        this.sourceImage= ThumbnailUtils.extractThumbnail(sourceImage ,THUMBSIZE, THUMBSIZE);
+        this.path=path;
     }
 
     public UUID getId() {
@@ -30,5 +37,13 @@ public class OurImage {
 
     public void setSourceImage(Bitmap sourceImage) {
         this.sourceImage = sourceImage;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }
