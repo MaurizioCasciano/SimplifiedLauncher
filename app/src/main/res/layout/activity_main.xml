@@ -9,13 +9,14 @@
     tools:context="com.simplifiedlauncher.home.MainActivity">
 
     <TextView
+        android:id="@+id/orario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_weight="1"
-        android:textSize="30dp"
+        android:background="#fff"
+        android:gravity="center"
         android:text="00:00"
-        android:background="#fff"/>
+        android:textSize="30dp"/>
 
     <LinearLayout
         android:id="@+id/container"
@@ -25,21 +26,21 @@
 
         <Button
             android:id="@+id/telefono"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_telephone"
-            android:text="Telefono"
-            android:layout_weight="1"/>
+            android:text="Telefono"/>
 
         <Button
             android:id="@+id/rubrica"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_contacts"
-            android:text="Rubrica"
-            android:layout_weight="1"/>
+            android:text="Rubrica"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,21 +49,21 @@
 
         <Button
             android:id="@+id/sms"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_sms"
-            android:text="Messaggi"
-            android:layout_weight="1"/>
+            android:text="Messaggi"/>
 
         <Button
             android:id="@+id/chiamate_rapide"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_rapid_call"
-            android:text="Chiamate \nRapide"
-            android:layout_weight="1"/>
+            android:text="Chiamate \nRapide"/>
 
     </LinearLayout>
     <LinearLayout
@@ -72,21 +73,21 @@
 
         <Button
             android:id="@+id/camera"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_camera"
-            android:text="Camera"
-            android:layout_weight="1"/>
+            android:text="Camera"/>
 
         <Button
             android:id="@+id/galleria"
-            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
             android:drawableTop="@mipmap/img_gallery"
-            android:text="Galleria"
-            android:layout_weight="1"/>
+            android:text="Galleria"/>
     </LinearLayout>
 
     <LinearLayout
@@ -99,12 +100,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:text="SOS"
+            android:background="#FFF00000"
             android:gravity="center"
-            android:textSize="50dp"
-            android:textStyle="bold"
+            android:text="SOS"
             android:textColor="#FFFF"
-            android:background="#FFF00000"/>
+            android:textSize="50dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 </LinearLayout>
