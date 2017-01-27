@@ -19,13 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.simplifiedlauncher.home.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:launchMode="singleTask"
-            android:stateNotNeeded="true"
-            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen">
-        </activity>
-        <activity
             android:name="com.simplifiedlauncher.applist.AppsListActivity"
             android:label="@string/title_activity_app_list"
             android:theme="@style/AppTheme.NoActionBar"/>
@@ -33,7 +26,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.HOME"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
