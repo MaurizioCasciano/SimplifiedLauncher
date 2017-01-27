@@ -52,13 +52,11 @@ public class MainActivity extends RuntimePermissionsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (super.checkPermission(permissions)) {
-            Log.d(TAG, "onCreate: permissions granted");
-        } else {
+        while(!super.checkPermission(permissions)){
             Log.d(TAG, "onCreate: permissions denied");
             super.requestAppPermissions(permissions, R.id.activity_main, 1236);
         }
-
+        Log.d(TAG, "onCreate: permissions granted");
 
         container = (LinearLayout) findViewById(R.id.container);
 

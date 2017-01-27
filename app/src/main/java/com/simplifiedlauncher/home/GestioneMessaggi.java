@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class GestioneMessaggi extends AppCompatActivity {
+    public static final String TAG = GestioneMessaggi.class.getName();
     Intent padre;
     ArrayList<Contatto> array_contatti;
     ArrayList<Messaggio> array_messaggi;
@@ -52,6 +54,7 @@ public class GestioneMessaggi extends AppCompatActivity {
             }
         });
 
+        Log.d(TAG, "onCreate: arrayMessaggi " + array_messaggi);
     }
 
     public void caricaMessaggi() {
@@ -77,6 +80,9 @@ public class GestioneMessaggi extends AppCompatActivity {
                 contatto = cercaContatto(address);
                 read = cursor.getString(3);
                 System.out.println(cursor.getString(0));
+
+                Log.d(TAG, "caricaMessaggi: BODY: " + body);
+
                 if (read.equals("0")) {
                     letto = false;
                 } else {
@@ -87,6 +93,13 @@ public class GestioneMessaggi extends AppCompatActivity {
                         messaggio = new Messaggio(contatto.getNome(), body, date, false, letto);
                     } else {
                         messaggio = new Messaggio(contatto.getNome(), body, date, true, letto);
+                    }
+                    array_messaggi.add(messaggio);
+                } else {
+                    if (type.equalsIgnoreCase("1")) {
+                        messaggio = new Messaggio(address, body, date, false, letto);
+                    } else {
+                        messaggio = new Messaggio(address, body, date, true, letto);
                     }
                     array_messaggi.add(messaggio);
                 }
