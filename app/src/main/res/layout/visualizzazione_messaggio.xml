@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/contattoMessaggioLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/contattoMessaggio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="22dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dataMessaggioLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="18dp"
+                android:text="Il giorno: "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/dataMessaggio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/oraMessaggioLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="Alle ore: "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/oraMessaggio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f0000000"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/corpoMessaggio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#f0000000"
+            android:textSize="40dp"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <Button
+        android:onClick="indietro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:background="#ff00"
+        android:layout_margin="10dp"
+        android:text="Indietro"/>
+</LinearLayout>

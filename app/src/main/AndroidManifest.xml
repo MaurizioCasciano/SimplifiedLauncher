@@ -45,6 +45,10 @@
         <activity android:name="com.simplifiedlauncher.gallery.PhotoGalleryActivity"/>
         <activity android:name="com.simplifiedlauncher.home.RapidCall">
         </activity>
+        <activity android:name="com.simplifiedlauncher.home.VisualizzaMessaggio">
+        </activity>
+        <activity android:name="com.simplifiedlauncher.home.FormInserisciMessaggio">
+        </activity>
     </application>
 
 </manifest>
