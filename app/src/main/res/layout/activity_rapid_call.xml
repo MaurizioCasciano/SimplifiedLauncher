@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rapid Call"
+        android:text="Chiamate Rapide"
         android:textAlignment="center"
         android:textSize="28sp"/>
 
@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
+            android:textSize="22dp"
             android:text="Button"/>
 
         <Button
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
+            android:textSize="22dp"
             android:text="Button"/>
 
     </LinearLayout>
@@ -50,12 +52,14 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
+            android:textSize="22dp"
             android:text="Button"/>
 
         <Button
             android:id="@+id/btnFourthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:textSize="22dp"
             android:layout_weight="1"
             android:text="Button"/>
 
@@ -70,6 +74,7 @@
             android:id="@+id/btnFifthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:textSize="22dp"
             android:layout_weight="1"
             android:text="Button"/>
 
@@ -77,6 +82,7 @@
             android:id="@+id/btnSixthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:textSize="22dp"
             android:layout_weight="1"
             android:text="Button"/>
 

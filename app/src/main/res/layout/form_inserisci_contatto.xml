@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:text="Contatto"
         android:textSize="50dp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"/>
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,31 +22,35 @@
 
     <EditText
         android:id="@+id/nome"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="inserisci qui il nome"/>
+        android:background="@drawable/bordo_edit_text"
+        android:hint="inserisci qui il nome"
+        android:textSize="25dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Numero:"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/numero"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bordo_edit_text"
+        android:hint="inserisci qui il numero"
         android:inputType="number"
-        android:hint="inserisci qui il numero"/>
+        android:textSize="25dp"/>
 
     <Button
-        android:onClick="aggiungi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="40dp"
-        android:text="Aggiungi"/>
+        android:onClick="aggiungi"
+        android:text="Aggiungi"
+        android:textSize="40dp"/>
 </LinearLayout>

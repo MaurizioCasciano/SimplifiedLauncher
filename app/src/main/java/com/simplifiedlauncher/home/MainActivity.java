@@ -192,9 +192,13 @@ public class MainActivity extends RuntimePermissionsActivity {
                     case MotionEvent.ACTION_UP:
                         sos.setBackgroundColor(Color.RED);
                         //send sms and call
-                        SmsManager manager=SmsManager.getDefault();
-                        manager.sendTextMessage("3395000044",null,"Sono in una situazione di pericolo, ho bisogno di aiuto",null,null);
-
+                        SmsManager manager = SmsManager.getDefault();
+                        manager.sendTextMessage("3395000044", null, "Sono in una situazione di pericolo, ho bisogno di aiuto", null, null);
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                         Intent avviaChiamata = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "3395000044"));
                         startActivity(avviaChiamata);
                         break;
