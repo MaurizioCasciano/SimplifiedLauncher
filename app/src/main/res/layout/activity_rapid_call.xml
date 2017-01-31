@@ -16,8 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chiamate Rapide"
+
         android:textAlignment="center"
-        android:textSize="28sp"/>
+        android:textSize="40sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,17 +31,21 @@
             android:id="@+id/btnFirstContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:textSize="22dp"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
             android:id="@+id/btnSecondContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:textSize="22dp"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
 
@@ -51,17 +58,21 @@
             android:id="@+id/btnThirdContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:textSize="22dp"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
             android:id="@+id/btnFourthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:textSize="22dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
 
@@ -74,17 +85,21 @@
             android:id="@+id/btnFifthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:textSize="22dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
             android:id="@+id/btnSixthContact"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:textSize="22dp"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="Button"/>
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
 </LinearLayout>

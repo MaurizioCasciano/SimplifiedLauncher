@@ -7,9 +7,14 @@
     <TextView
         android:id="@+id/display"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_weight="0.5"
+        android:ellipsize="start"
+        android:focusable="false"
         android:gravity="right"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
         android:text=""
         android:textSize="60dp"
         android:textStyle="bold"/>
@@ -24,8 +29,9 @@
             android:id="@+id/Button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="1"
             android:textSize="50dp"/>
 
@@ -33,9 +39,10 @@
             android:id="@+id/Button2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_margin="3dp"
 
-            android:backgroundTint="@color/awesomeBlue"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
             android:text="2"
             android:textSize="50dp"/>
 
@@ -43,8 +50,9 @@
             android:id="@+id/Button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="3"
             android:textSize="50dp"/>
 
@@ -60,8 +68,9 @@
             android:id="@+id/Button4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="4"
             android:textSize="50dp"/>
 
@@ -69,8 +78,9 @@
             android:id="@+id/Button5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="5"
             android:textSize="50dp"/>
 
@@ -78,8 +88,9 @@
             android:id="@+id/Button6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="6"
             android:textSize="50dp"/>
 
@@ -95,8 +106,9 @@
             android:id="@+id/Button7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="7"
             android:textSize="50dp"/>
 
@@ -104,8 +116,9 @@
             android:id="@+id/Button8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="8"
             android:textSize="50dp"/>
 
@@ -113,8 +126,9 @@
             android:id="@+id/Button9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="9"
             android:textSize="50dp"/>
 
@@ -130,8 +144,9 @@
             android:id="@+id/ButtonAsterisco"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="*"
             android:textSize="50dp"/>
 
@@ -139,8 +154,9 @@
             android:id="@+id/Button0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="0"
             android:textSize="50dp"/>
 
@@ -148,8 +164,9 @@
             android:id="@+id/ButtonCancelletto"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/awesomeBlue"
+            android:background="@color/awesomeBlue"
             android:text="#"
             android:textSize="50dp"/>
 

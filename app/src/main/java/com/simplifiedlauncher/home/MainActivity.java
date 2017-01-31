@@ -286,7 +286,14 @@ public class MainActivity extends RuntimePermissionsActivity {
                     Date dt = new Date();
                     int hours = dt.getHours();
                     int minutes = dt.getMinutes();
-                    String curTime = hours + ":" + minutes;
+                    String curTime;
+                    String minute = "0";
+                    if (minutes < 10) {
+                        minute += minutes;
+                        curTime = hours + ":" + minute;
+                    } else {
+                         curTime = hours + ":" + minutes;
+                    }
                     orario.setText(curTime);
                 } catch (Exception e) {
                 }

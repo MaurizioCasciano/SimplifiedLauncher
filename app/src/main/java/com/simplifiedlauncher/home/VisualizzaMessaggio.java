@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class VisualizzaMessaggio extends AppCompatActivity {
 
         padre= getIntent();
         messaggio = (Messaggio) padre.getSerializableExtra("Messaggio");
-
+        viewCorpoMessaggio.setMovementMethod(new ScrollingMovementMethod());
         if(messaggio.getInviato()) {
             viewCorpoMessaggio.setBackground(getResources().getDrawable(R.drawable.bordo_messaggio_inviato));
             viewContattoMessaggioLabel.setText("Inviato a: ");
