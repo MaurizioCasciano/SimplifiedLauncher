@@ -5,78 +5,101 @@
     android:id="@+id/activity_rapid_call"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="com.simplifiedlauncher.home.RapidCall">
 
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="28sp"
-    android:text="Rapid Call"
-    android:textAlignment="center"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chiamate Rapide"
+
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"/>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnFirstContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnSecondContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnThirdContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnFourthContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnFifthContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
             android:id="@+id/btnSixthContact"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/awesomeBlue"
+            android:text="Button"
+            android:textSize="22dp"/>
 
     </LinearLayout>
 </LinearLayout>

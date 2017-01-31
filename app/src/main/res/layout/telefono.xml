@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/display"
         android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_weight="0.5"
-        android:layout_height="50dp"
-        android:textSize="50dp"
-        android:textStyle="bold"
+        android:ellipsize="start"
+        android:focusable="false"
         android:gravity="right"
-        android:text=""/>
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="60dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,24 +29,35 @@
             android:id="@+id/Button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:background="@color/awesomeBlue"
+            android:text="1"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
+
             android:layout_weight="1"
-            android:text="2" />
+            android:background="@color/awesomeBlue"
+            android:text="2"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:background="@color/awesomeBlue"
+            android:text="3"
+            android:textSize="50dp"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,24 +68,34 @@
             android:id="@+id/Button4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="4" />
+            android:background="@color/awesomeBlue"
+            android:text="4"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="5" />
+            android:background="@color/awesomeBlue"
+            android:text="5"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="6" />
+            android:background="@color/awesomeBlue"
+            android:text="6"
+            android:textSize="50dp"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,24 +106,34 @@
             android:id="@+id/Button7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="7" />
+            android:background="@color/awesomeBlue"
+            android:text="7"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="8" />
+            android:background="@color/awesomeBlue"
+            android:text="8"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="9" />
+            android:background="@color/awesomeBlue"
+            android:text="9"
+            android:textSize="50dp"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,24 +144,34 @@
             android:id="@+id/ButtonAsterisco"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="*" />
+            android:background="@color/awesomeBlue"
+            android:text="*"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/Button0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="0" />
+            android:background="@color/awesomeBlue"
+            android:text="0"
+            android:textSize="50dp"/>
 
         <Button
             android:id="@+id/ButtonCancelletto"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="#" />
+            android:background="@color/awesomeBlue"
+            android:text="#"
+            android:textSize="50dp"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -137,7 +183,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="cancella" />
+            android:background="@color/redNegative"
+            android:text="cancella"
+            android:textSize="30dp"/>
 
 
         <Button
@@ -145,7 +193,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="chiama" />
+            android:background="@color/greenPositive"
+            android:text="chiama"
+            android:textSize="30dp"/>
 
     </LinearLayout>
 </LinearLayout>

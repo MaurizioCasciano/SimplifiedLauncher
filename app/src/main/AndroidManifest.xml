@@ -21,8 +21,10 @@
         <activity
             android:name="com.simplifiedlauncher.applist.AppsListActivity"
             android:label="@string/title_activity_app_list"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.simplifiedlauncher.home.MainActivity">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.home.MainActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -30,16 +32,24 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.simplifiedlauncher.home.FormInserisciContatto"/>
-        <activity android:name="com.simplifiedlauncher.home.GestioneMessaggi"/>
-        <activity android:name="com.simplifiedlauncher.home.Rubrica"/>
-        <activity android:name="com.simplifiedlauncher.home.Telefono"/>
-        <activity android:name="com.simplifiedlauncher.gallery.PhotoGalleryActivity"/>
-        <activity android:name="com.simplifiedlauncher.home.RapidCall">
+        <activity android:name="com.simplifiedlauncher.home.FormInserisciContatto"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.home.GestioneMessaggi"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.home.Rubrica"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.home.Telefono"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.gallery.PhotoGalleryActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.simplifiedlauncher.home.RapidCall"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.simplifiedlauncher.home.VisualizzaMessaggio">
+        <activity android:name="com.simplifiedlauncher.home.VisualizzaMessaggio"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.simplifiedlauncher.home.FormInserisciMessaggio">
+        <activity android:name="com.simplifiedlauncher.home.FormInserisciMessaggio"
+                  android:screenOrientation="portrait">
         </activity>
     </application>
 

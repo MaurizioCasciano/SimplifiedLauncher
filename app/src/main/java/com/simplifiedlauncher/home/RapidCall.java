@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -108,8 +109,10 @@ public class RapidCall extends AppCompatActivity {
             String restoredText = prefs.getString("name", null);
             if (restoredText != null) {
                 String name = prefs.getString("name", "No name defined");//"No name defined" is the default value.
-                int idName = prefs.getInt("idName", 0); //0 is the default value.
-                //avvia chiamata
+                String idName = prefs.getString("idName", "null"); //0 is the default value.
+                Log.d("SL", "checkExisting: " + idName);
+                Intent avviaChiamata = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + idName));
+                startActivity(avviaChiamata);
             } else {
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                 intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
@@ -125,16 +128,22 @@ public class RapidCall extends AppCompatActivity {
                 switch (arrayOfCheck[requestCode]) {
                     case CHECK1:
                         btnFirstContact.setText(name);
+                        break;
                     case CHECK2:
                         btnSecondContact.setText(name);
+                        break;
                     case CHECK3:
                         btnThirdContact.setText(name);
+                        break;
                     case CHECK4:
                         btnFourthContact.setText(name);
+                        break;
                     case CHECK5:
                         btnFifthContact.setText(name);
+                        break;
                     case CHECK6:
                         btnSixthContact.setText(name);
+                        break;
                 }
             } else {
 
@@ -145,7 +154,7 @@ public class RapidCall extends AppCompatActivity {
     private void saveData(String name, String phoneN, int requestCode) {
         SharedPreferences prefs = getSharedPreferences(arrayOfCheck[requestCode], MODE_PRIVATE);
         prefs.edit().putString("name", name).apply();
-        prefs.edit().putInt("idName", Integer.parseInt(phoneN));
+        prefs.edit().putString("idName", phoneN).apply();
         checkExisting(requestCode, INSERT);
     }
 

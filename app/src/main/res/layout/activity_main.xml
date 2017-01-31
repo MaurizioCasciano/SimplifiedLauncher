@@ -96,7 +96,8 @@
         android:layout_weight="1"
         android:background="#FFFF">
 
-        <TextView
+        <Button
+            android:id="@+id/sos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"

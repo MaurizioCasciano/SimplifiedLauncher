@@ -4,9 +4,11 @@ import android.Manifest;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,7 +35,10 @@ public class MainActivity extends RuntimePermissionsActivity {
     TextView orario;
     Intent i;
     LinearLayout container;
+    Button sos;
     ArrayList<Contatto> array_contatti;
+    String sosNumber;
+    String sosSms;
 
     public static String[] permissions = new String[]{
             Manifest.permission.CALL_PHONE,
@@ -52,7 +57,7 @@ public class MainActivity extends RuntimePermissionsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        while(!super.checkPermission(permissions)){
+        while (!super.checkPermission(permissions)) {
             Log.d(TAG, "onCreate: permissions denied");
             super.requestAppPermissions(permissions, R.id.activity_main, 1236);
         }
@@ -68,7 +73,7 @@ public class MainActivity extends RuntimePermissionsActivity {
         final Fotocamera f = new Fotocamera(this);
         galleria = (Button) findViewById(R.id.galleria);
         orario = (TextView) findViewById(R.id.orario);
-
+        sos = (Button) findViewById(R.id.sos);
         Thread myThread = null;
 
         Runnable myRunnableThread = new CountDownRunner();
@@ -177,6 +182,30 @@ public class MainActivity extends RuntimePermissionsActivity {
                 return true;
             }
         });
+        sos.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        sos.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        sos.setBackgroundColor(Color.RED);
+                        //send sms and call
+                        SmsManager manager = SmsManager.getDefault();
+                        manager.sendTextMessage("3395000044", null, "Sono in una situazione di pericolo, ho bisogno di aiuto", null, null);
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        Intent avviaChiamata = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "3395000044"));
+                        startActivity(avviaChiamata);
+                        break;
+                }
+                return true;
+            }
+        });
 
         new CaricaRubrica().execute();
     }
@@ -257,7 +286,14 @@ public class MainActivity extends RuntimePermissionsActivity {
                     Date dt = new Date();
                     int hours = dt.getHours();
                     int minutes = dt.getMinutes();
-                    String curTime = hours + ":" + minutes;
+                    String curTime;
+                    String minute = "0";
+                    if (minutes < 10) {
+                        minute += minutes;
+                        curTime = hours + ":" + minute;
+                    } else {
+                         curTime = hours + ":" + minutes;
+                    }
                     orario.setText(curTime);
                 } catch (Exception e) {
                 }

@@ -1,9 +1,11 @@
 package com.simplifiedlauncher.home;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,78 +65,174 @@ public class Telefono extends AppCompatActivity {
         buttonCancelletto = (Button) findViewById(R.id.ButtonCancelletto);
         buttonCancella = (Button) findViewById(R.id.ButtonCancella);
         buttonChiama = (Button) findViewById(R.id.ButtonChiama);
-
-        button1.setOnClickListener(new View.OnClickListener() {
+        display.setSelected(true);
+        button1.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("1");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button1.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button1.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("1");
+                        break;
+                }
+                return true;            }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        button2.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("2");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button2.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button2.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("2");
+                        break;
+                }
+                return true;            }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
+        button3.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("3");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button3.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button3.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("3");
+                        break;
+                }
+                return true;            }
         });
-        button4.setOnClickListener(new View.OnClickListener() {
+        button4.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("4");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button4.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button4.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("4");
+                        break;
+                }
+                return true;            }
         });
-        button5.setOnClickListener(new View.OnClickListener() {
+        button5.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("5");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button5.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button5.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("5");
+                        break;
+                }
+                return true;            }
         });
-        button6.setOnClickListener(new View.OnClickListener() {
+        button6.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("6");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button6.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button6.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("6");
+                        break;
+                }
+                return true;            }
         });
-        button7.setOnClickListener(new View.OnClickListener() {
+        button7.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("7");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button7.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button7.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("7");
+                        break;
+                }
+                return true;            }
         });
-        button8.setOnClickListener(new View.OnClickListener() {
+        button8.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("8");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button8.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button8.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("8");
+                        break;
+                }
+                return true;            }
         });
-        button9.setOnClickListener(new View.OnClickListener() {
+        button9.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("9");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button9.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button9.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("9");
+                        break;
+                }
+                return true;            }
         });
-        buttonAsterisco.setOnClickListener(new View.OnClickListener() {
+        buttonAsterisco.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("*");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        buttonAsterisco.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        buttonAsterisco.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("*");
+                        break;
+                }
+                return true;            }
         });
-        button0.setOnClickListener(new View.OnClickListener() {
+        button0.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("0");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        button0.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        button0.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("0");
+                        break;
+                }
+                return true;            }
         });
-        buttonCancelletto.setOnClickListener(new View.OnClickListener() {
+        buttonCancelletto.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                updateDisplay("#");
-            }
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        buttonCancelletto.setBackgroundColor(Color.YELLOW);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        buttonCancelletto.setBackgroundColor(getResources().getColor(R.color.awesomeBlue));
+                        updateDisplay("#");
+                        break;
+                }
+                return true;            }
         });
 
         buttonCancella.setOnClickListener(new View.OnClickListener() {
