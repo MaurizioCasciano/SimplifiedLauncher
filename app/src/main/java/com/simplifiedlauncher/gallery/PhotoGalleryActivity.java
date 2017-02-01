@@ -23,7 +23,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
     List<OurImage> arrayImage = new ArrayList<>();
     List<itemOfImages> arrayOfItem = new ArrayList<>();
     private static final int REQUEST_CODE_PERMISSION = 2;
-    String[] arrayPermission = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    String[] arrayPermission = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
     ArrayList<String> filePaths = new ArrayList<String>();
     ListView listView;
     ImageAdapter adapter;
@@ -36,7 +36,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         try {
             if (ActivityCompat.checkSelfPermission(this, arrayPermission[0])
                     != MockPackageManager.PERMISSION_GRANTED &&
-                    ActivityCompat.checkSelfPermission(this,arrayPermission[1])!=MockPackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.checkSelfPermission(this, arrayPermission[1]) != MockPackageManager.PERMISSION_GRANTED) {
 
                 ActivityCompat.requestPermissions(this,
                         arrayPermission, REQUEST_CODE_PERMISSION);
@@ -59,15 +59,37 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         for (int i = 0; i < numberOfImage; i++) {
             File image = new File(filePaths.get(i));
             bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(), bmOptions);
-            arrayImage.add(new OurImage(bitmap,filePaths.get(i)));
+            arrayImage.add(new OurImage(bitmap, filePaths.get(i)));
             Log.d("SL", "loadImage: " + image.getAbsolutePath());
-            if ((i + 1) % 3 == 0 && i != 0) {
-                itemOfImages ioi = new itemOfImages(arrayImage.get(i - 2), arrayImage.get(i - 1), arrayImage.get(i));
-                Log.d("SL", "loadImage: item of images " + ioi);
-                adapter.add(ioi);
+
+            switch ((i + 1) % 3) {
+                case 0: {
+                    Log.d("SWITCH", "case 0");
+                    itemOfImages ioi = new itemOfImages(arrayImage.get(i - 2), arrayImage.get(i - 1), arrayImage.get(i));
+                    Log.d("SL", "loadImage: item of images " + ioi);
+                    adapter.add(ioi);
+                    break;
+                }
+                case 1: {//bisogna aggiungere solo 2 immagini
+                    Log.d("SWITCH", "case 1");
+                    if ((i + 1) == (numberOfImage)) {
+                        itemOfImages ioi = new itemOfImages(arrayImage.get(i), null, null);
+                        Log.d("SL", "loadImage: item of images " + ioi);
+                        adapter.add(ioi);
+                    }
+                    break;
+                }
+                case 2: {//bisogna aggiungere solo 1 immagine
+                    Log.d("SWITCH", "case 2");
+                    if ((i + 1) == numberOfImage) {
+                        itemOfImages ioi = new itemOfImages(arrayImage.get(i - 1), arrayImage.get(i), null);
+                        Log.d("SL", "loadImage: item of images " + ioi);
+                        adapter.add(ioi);
+                    }
+                    break;
+                }
             }
         }
-
     }
 
     // Reading file paths from SDCard
@@ -87,11 +109,14 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         Log.d("SL", folder.getAbsolutePath());
         // getting list of file paths
         File[] listFiles = folder.listFiles();
-        numberOfImage=listFiles.length;
-        for (int i = 0; i < numberOfImage; i++) {
-            filePaths.add(listFiles[i].getAbsolutePath());
+
+        if(listFiles != null){
+            numberOfImage = listFiles.length;
+            for (int i = 0; i < numberOfImage; i++) {
+                filePaths.add(listFiles[i].getAbsolutePath());
+            }
+            Log.d("SL", "getFilePaths: numero di foto " + listFiles.length);
         }
-        Log.d("SL", "getFilePaths: numero di foto " + listFiles.length);
     }
 
     @Override
@@ -101,7 +126,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_PERMISSION) {
             if (grantResults.length == 2 &&
                     grantResults[0] == MockPackageManager.PERMISSION_GRANTED &&
-                    grantResults[1]==MockPackageManager.PERMISSION_GRANTED) {
+                    grantResults[1] == MockPackageManager.PERMISSION_GRANTED) {
 
                 // Success Stuff here
                 getFilePaths();
