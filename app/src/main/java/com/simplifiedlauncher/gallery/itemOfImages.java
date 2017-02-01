@@ -42,9 +42,9 @@ public class itemOfImages {
     @Override
     public String toString() {
         return "itemOfImages{" +
-                "firstImage=" + firstImage.getSourceImage() +
-                ", secondImage=" + secondImage.getSourceImage() +
-                ", thirdImage=" + thirdImage.getSourceImage() +
+                "firstImage=" + (firstImage != null ? firstImage.getSourceImage() : "null") +
+                ", secondImage=" + (secondImage != null ? secondImage.getSourceImage() : "null") +
+                ", thirdImage=" + (thirdImage != null ? thirdImage.getSourceImage() : "null")+
                 '}';
     }
 }
